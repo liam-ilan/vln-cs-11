@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3486de79-0aaf-48b5-ba1d-f6236915dcf4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjectNumber1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjectNumber1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjectNumber1/StringTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjectNumber1/StringTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjectNumber1/TestClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/ProjectNumber1/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/ProjectNumber1/TestClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,10 +126,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestClass.testTwo" />
-      <item itemvalue="JUnit.TestClass.testOne" />
       <item itemvalue="JUnit.TestClass" />
+      <item itemvalue="JUnit.TestClass.testOne" />
       <item itemvalue="JUnit.TestClass.testThree" />
+      <item itemvalue="JUnit.TestClass.testTwo" />
     </list>
     <recent_temporary>
       <list>
@@ -170,22 +165,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1590433555536">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom" timestamp="1590443616766">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1590433555536" />
-    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1590433555535">
+    <state width="1238" height="179" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1590443616766" />
+    <state width="1238" height="179" key="GridCell.Tab.0.center" timestamp="1590443616763">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1590433555535" />
-    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1590433555534">
+    <state width="1238" height="179" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1590443616763" />
+    <state width="1238" height="179" key="GridCell.Tab.0.left" timestamp="1590443616762">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1590433555534" />
-    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1590433555535">
+    <state width="1238" height="179" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1590443616762" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right" timestamp="1590443616764">
       <screen x="0" y="23" width="1280" height="721" />
     </state>
-    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1590433555535" />
+    <state width="1238" height="179" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1590443616764" />
   </component>
   <component name="masterDetails">
     <states>
