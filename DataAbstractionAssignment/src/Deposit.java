@@ -11,8 +11,10 @@ public class Deposit {
         this.account = account;
     }
 
+    // Requires: nothing
+    // Modifies: nothing
+    // Effects: returns "Deposit of: $<amount> Date: <date> into account: <account>"
     public String toString(){
-        //your code here
-        return "";
+        return "Deposit of: $" + amount + " Date: " + date + " into account: " + account;
     }
 }

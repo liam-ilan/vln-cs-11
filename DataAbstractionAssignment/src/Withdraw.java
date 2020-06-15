@@ -11,8 +11,10 @@ public class Withdraw {
         this.account = account;
     }
 
+    // Requires: nothing
+    // Modifies: nothing
+    // Effects: returns "Withdraw of: $<amount> Date: <date> from account: <account>"
     public String toString(){
-        //your code here
-        return "";
+        return "Withdraw of: $" + amount + " Date: " + date + " from account: " + account;
     }
 }
