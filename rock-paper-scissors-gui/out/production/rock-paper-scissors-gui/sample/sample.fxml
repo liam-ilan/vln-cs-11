@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label fx:id="result" text="Play a Game" textFill="WHITE">
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Visitor TT2 BRK" size="30.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="253.0" prefWidth="600.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="295.0" prefWidth="298.0">
+                    <children>
+                        <Label fx:id="yourScore" text="You: 0" textFill="WHITE">
+                            <font>
+                                <Font name="Visitor TT2 BRK" size="24.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="298.0">
+                            <children>
+                                <RadioButton fx:id="rockButton" mnemonicParsing="false" onAction="#choseRock" text="Rock" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Visitor TT2 BRK" size="20.0" />
+                                    </font>
+                                </RadioButton>
+                                <RadioButton fx:id="paperButton" mnemonicParsing="false" onAction="#chosePaper" text="Paper" textFill="WHITE">
+                                    <font>
+                                        <Font name="Visitor TT2 BRK" size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </RadioButton>
+                                <RadioButton fx:id="scissorsButton" mnemonicParsing="false" onAction="#choseScissors" text="Scissors" textFill="WHITE">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Visitor TT2 BRK" size="20.0" />
+                                    </font>
+                                </RadioButton>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="295.0" prefWidth="196.0">
+                    <children>
+                        <Label fx:id="machineScore" text="Machine: 0" textFill="WHITE">
+                            <font>
+                                <Font name="Visitor TT2 BRK" size="24.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="machineChoice" textFill="WHITE">
+                            <font>
+                                <Font name="Visitor TT2 BRK" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Button fx:id="play" disable="true" mnemonicParsing="false" onAction="#play" text="Play">
+            <font>
+                <Font name="Visitor TT2 BRK" size="30.0" />
+            </font>
+        </Button>
+    </children>
+</VBox>
