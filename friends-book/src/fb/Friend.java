@@ -23,15 +23,11 @@ public class Friend {
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
 
     public Date getBirthDate() {
         return birthDate;
     }
-
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
@@ -39,7 +35,6 @@ public class Friend {
     public String getHomepageURL() {
         return homepageURL;
     }
-
     public void setHomepageURL(String homepageURL) {
         this.homepageURL = homepageURL;
     }
@@ -47,11 +42,13 @@ public class Friend {
     public String getInstagramHandle() {
         return instagramHandle;
     }
-
     public void setInstagramHandle(String instagramHandle) {
         this.instagramHandle = instagramHandle;
     }
 
+    // Requires: string name, Date birthDate, String instagramHandle, String homepageURL
+    // Modifies: this.name, this.birthDate, this.instagramHandle, this.homepageURL
+    // Effects: updates all properties to appropriate values
     public void update(String name, Date birthDate, String instagramHandle, String homepageURL) {
         this.name = name;
         this.birthDate = birthDate;
@@ -59,6 +56,9 @@ public class Friend {
         this.homepageURL = homepageURL;
     }
 
+    // Requires: nothing
+    // Modifies: nothing
+    // Effects: returns a formated string containing name, birthDate, instagramHandle, and homepageURL
     public String toString(){
         return "Name: " + this.name +
                 "\nBirthdate: " + this.birthDate +
