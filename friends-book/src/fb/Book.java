@@ -25,4 +25,5 @@ public class Book {
 
     public ArrayList<Friend> getList() { return list; }
     public Friend getItem(int index) { return list.get(index); }
+    public Friend setItem(int index, Friend friend) { return list.set(index, friend); }
 }

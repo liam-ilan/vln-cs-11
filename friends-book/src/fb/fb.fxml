@@ -18,8 +18,20 @@
       </Label>
       <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="600.0">
          <children>
-            <ListView fx:id="listView" maxWidth="-Infinity" minHeight="-Infinity" onMouseClicked="#listClicked" prefHeight="341.0" prefWidth="199.0" />
-            <VBox prefHeight="400.0" prefWidth="402.0">
+            <VBox alignment="TOP_CENTER" prefHeight="377.0" prefWidth="354.0">
+               <children>
+                  <ListView fx:id="listView" maxWidth="-Infinity" minHeight="-Infinity" onMouseClicked="#listClicked" prefHeight="314.0" prefWidth="276.0" />
+                  <Button fx:id="addButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addButtonClicked" text="Add">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="formContainer" prefHeight="400.0" prefWidth="402.0" visible="false">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="401.0">
                      <children>
