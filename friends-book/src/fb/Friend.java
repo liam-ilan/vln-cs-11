@@ -1,10 +1,10 @@
 package fb;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Friend {
     private String name;
-    private Date birthDate;
+    private LocalDate birthDate;
     private String instagramHandle;
     private String homepageURL;
 
@@ -13,7 +13,7 @@ public class Friend {
         this.name = name;
     }
 
-    public Friend(String name, Date birthDate, String instagramHandle, String homepageURL) {
+    public Friend(String name, LocalDate birthDate, String instagramHandle, String homepageURL) {
         this.name = name;
         this.birthDate = birthDate;
         this.instagramHandle = instagramHandle;
@@ -25,10 +25,10 @@ public class Friend {
     }
     public void setName(String name) { this.name = name; }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -46,10 +46,10 @@ public class Friend {
         this.instagramHandle = instagramHandle;
     }
 
-    // Requires: string name, Date birthDate, String instagramHandle, String homepageURL
+    // Requires: string name, LocalDate birthDate, String instagramHandle, String homepageURL
     // Modifies: this.name, this.birthDate, this.instagramHandle, this.homepageURL
     // Effects: updates all properties to appropriate values
-    public void update(String name, Date birthDate, String instagramHandle, String homepageURL) {
+    public void update(String name, LocalDate birthDate, String instagramHandle, String homepageURL) {
         this.name = name;
         this.birthDate = birthDate;
         this.instagramHandle = instagramHandle;

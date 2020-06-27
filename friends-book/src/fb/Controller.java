@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Controller {
     public ListView listView;
@@ -49,14 +49,14 @@ public class Controller {
 
     public void updateForm(Friend data) {
         nameInput.setText(data.getName());
-        // DATE
+        birthdateInput.setValue(data.getBirthDate());
         instagramInput.setText(data.getInstagramHandle());
         homepageInput.setText(data.getHomepageURL());
     }
 
     public void clearForm() {
         nameInput.setText("");
-        // DATE
+        birthdateInput.setValue(LocalDate.now());
         instagramInput.setText("");
         homepageInput.setText("");
     }
@@ -64,7 +64,7 @@ public class Controller {
     public Friend friendFromForm() {
         return new Friend(
                 nameInput.getText(),
-                new Date(), // DATE
+                birthdateInput.getValue(), // DATE
                 instagramInput.getText(),
                 homepageInput.getText()
         );

@@ -3,7 +3,7 @@ import fb.Friend;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import static org.junit.Assert.*;
 
@@ -38,9 +38,8 @@ public class BookTests {
         for (int i = 0; i < 10; i += 1) {
             String name = names[(int) (Math.random() * names.length)];
 
-            // Note: Date gets years since 1900
-            Date birthDate = new Date(
-                    ((int) (Math.random() * 100)),
+            LocalDate birthDate = LocalDate.of(
+                    ((int) (Math.random() * 100)) + 1900,
                     1 + ((int) (Math.random() * 12)),
                     1 + ((int) (Math.random() * 28)));
 
@@ -56,9 +55,8 @@ public class BookTests {
     public void testAdd(){
         String name = names[(int) (Math.random() * names.length)];
 
-        // Note: Date gets years since 1900
-        Date birthDate = new Date(
-                ((int) (Math.random() * 100)),
+        LocalDate birthDate = LocalDate.of(
+                ((int) (Math.random() * 100)) + 1900,
                 1 + ((int) (Math.random() * 12)),
                 1 + ((int) (Math.random() * 28)));
 
