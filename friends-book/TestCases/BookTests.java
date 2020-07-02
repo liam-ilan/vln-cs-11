@@ -45,7 +45,7 @@ public class BookTests {
 
             String homepageURL = "example.com/" + name;
             String instagramHandle = "theLegendary" + name + (int) (Math.random() * 1000);
-            Friend person = new Friend(name, birthDate, homepageURL, instagramHandle);
+            Friend person = new Friend(name, birthDate, instagramHandle, homepageURL);
 
             book.add(person);
         }
@@ -75,5 +75,30 @@ public class BookTests {
 
         assertEquals(book.getList().size(), 9);
         assertNotEquals(book.getItem(5), friend);
+    }
+
+    @Test
+    public void testToTsv(){
+        String generatedTsv = book.toTsv();
+
+        String expectedTsv = "";
+        for (int i = 0; i < book.getList().size(); i += 1) {
+            expectedTsv += book.getItem(i).toTsv() + "\n";
+        }
+
+        assertEquals(expectedTsv, generatedTsv);
+    }
+
+    @Test
+    public void testFromTsv(){
+        String tsv = book.toTsv();
+        Book newBook = Book.fromTsv(tsv);
+
+        for (int i = 0; i < book.getList().size(); i++) {
+            assertEquals(book.getItem(i).getName(), newBook.getItem(i).getName());
+            assertEquals(book.getItem(i).getBirthDate(), newBook.getItem(i).getBirthDate());
+            assertEquals(book.getItem(i).getInstagramHandle(), newBook.getItem(i).getInstagramHandle());
+            assertEquals(book.getItem(i).getHomepageURL(), newBook.getItem(i).getHomepageURL());
+        }
     }
 }

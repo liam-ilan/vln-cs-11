@@ -58,6 +58,21 @@ public class Friend {
 
     // Requires: nothing
     // Modifies: nothing
+    // Effects: returns the name, birthDate, instagramHandle, and homepageURL, in that order, as a tsv string
+    public String toTsv() {
+        return this.name + "\t" + this.birthDate + "\t" + this.instagramHandle + "\t" + this.homepageURL;
+    }
+
+    // Requires: single row from tsv
+    // Modifies: nothing
+    // Effects: returns a friend as specified by the tsv
+    public static Friend fromTsv(String tsv) {
+        String[] values = tsv.split("\t", -1);
+        return new Friend(values[0], LocalDate.parse(values[1]), values[2], values[3]);
+    }
+
+    // Requires: nothing
+    // Modifies: nothing
     // Effects: returns a formated string containing name, birthDate, instagramHandle, and homepageURL
     public String toString(){
         return "Name: " + this.name +

@@ -1,13 +1,12 @@
 package fb;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class Controller {
@@ -19,6 +18,13 @@ public class Controller {
     public Button saveButton;
     public Button deleteButton;
     public Button addButton;
+    public Button open;
+    public TextField fileNameInput;
+    public VBox listContainer;
+    public Label fileIndicator;
+
+    // name of working file
+    String workingFile = "friends.txt";
 
     // book to store our friends
     public Book book = new Book();
@@ -71,6 +77,17 @@ public class Controller {
     }
 
     /* EVENTS */
+    public void initialize() throws IOException {
+        fileIndicator.setText("Current File: " + workingFile);
+
+        // create new file if it does not exist
+        File file = new File(workingFile);
+        file.createNewFile();
+
+        book = Book.fromFile(workingFile);
+        renderBook();
+    }
+
     public void listClicked(MouseEvent mouseEvent) {
         if (selectedIndex == -2) {
             clearForm();
@@ -94,7 +111,7 @@ public class Controller {
         }
     }
 
-    public void saveButtonClicked(ActionEvent actionEvent) {
+    public void saveButtonClicked(ActionEvent actionEvent) throws IOException {
         suggestedId++;
 
         // only if name has been filled out
@@ -115,10 +132,12 @@ public class Controller {
             deleteButton.setDisable(false);
 
             renderBook();
+
+            book.toFile(workingFile);
         }
     }
 
-    public void deleteButtonClicked(ActionEvent actionEvent) {
+    public void deleteButtonClicked(ActionEvent actionEvent) throws IOException {
         if (selectedIndex != -2) {
             book.remove(book.getItem(selectedIndex));
             selectedIndex = -1;
@@ -130,6 +149,7 @@ public class Controller {
             deleteButton.setDisable(true);
 
             renderBook();
+            book.toFile(workingFile);
         }
     }
 
@@ -142,5 +162,23 @@ public class Controller {
         formContainer.setVisible(true);
         addButton.setDisable(true);
         deleteButton.setDisable(true);
+    }
+
+    public void openButtonClicked(ActionEvent actionEvent) throws IOException {
+        if (!fileNameInput.getText().equals("")) {
+            workingFile = fileNameInput.getText();
+            fileIndicator.setText("Current File: " + workingFile);
+            fileNameInput.setText("");
+
+            formContainer.setVisible(false);
+            addButton.setDisable(false);
+
+            // create new file if it does not exist
+            File file = new File(workingFile);
+            file.createNewFile();
+
+            book = Book.fromFile(workingFile);
+            renderBook();
+        }
     }
 }
